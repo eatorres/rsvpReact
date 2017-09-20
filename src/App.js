@@ -26,6 +26,7 @@ class App extends Component {
                         isConfirmed: !guest.isConfirmed,
                     }
                 }
+                return guest;
             })
         });
 
@@ -46,7 +47,7 @@ class App extends Component {
                     <div>
                         <h2>Invitees</h2>
                         <label>
-                            <input type="checkbox"/> Hide those who haven't responded
+                            <input type="checkbox" /> Hide those who haven't responded
                         </label>
                     </div>
                     <table className="counter">
@@ -65,7 +66,7 @@ class App extends Component {
                         </tr>
                         </tbody>
                     </table>
-                    <GuestList guests={this.state.guests}/>
+                    <GuestList guests={this.state.guests} toggleConfirmationAt={this.toggleConfirmationAt}/>
                 </div>
             </div>
         );
